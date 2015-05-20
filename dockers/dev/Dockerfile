@@ -8,6 +8,7 @@ RUN {\
 
 ADD apps/lib                                     /dist/apps/lib
 ADD apps/doc                                     /dist/apps/doc
+ADD apps/dic                                     /dist/apps/dic
 ADD config                                       /dist/config
 ADD apps/cloud                                   /dist/apps/cloud
 ADD apps/ext-5                                   /dist/apps/ext-5
@@ -61,6 +62,7 @@ ENV comp node
 RUN {\
   ln -s  ${release_path}/apps/${comp}  ${app_path}/${comp} \
   && ln -s  ${release_path}/apps/doc ${app_path}/${comp}/doc \
+  && ln -s  ${release_path}/apps/dic ${app_path}/${comp}/dic \
   && ln -s  ${release_path}/config/${_stage}/${comp}/config  ${app_path}/${comp}/ \
   && cp ${release_path}/config/${_stage}/${comp}/${comp}rc ~/.${comp}rc \
   && mkdir -p ${release_path}/apps/${comp}/lib \
@@ -72,6 +74,8 @@ ENV comp api
 RUN {\
   ln -s  ${release_path}/apps/${comp}  ${app_path}/${comp} \
   && ln -s  ${release_path}/apps/doc ${app_path}/${comp}/doc \
+  && ln -s  ${release_path}/apps/dic ${app_path}/${comp}/dic \
+  && ln -s  ${release_path}/config/${_stage}/${comp}/config  ${app_path}/${comp}/ \
   && ln -s  ${release_path}/config/${_stage}/${comp}/config  ${app_path}/${comp}/ \
   && cp ${release_path}/config/${_stage}/${comp}/${comp}rc ~/.${comp}rc \
   && mkdir -p ${release_path}/apps/${comp}/lib \
