@@ -3,7 +3,7 @@ if [ -z $REGISTRY ]; then
  REGISTRY="10.1.7.140"
 fi
 
-dockers=("cloud")
+dockers=("dev")
 num=${#dockers[@]}
 
 w=$(pwd)

@@ -5,8 +5,8 @@
 -->
 
 <monad_group>
-    <log_file>${server.home}/log/monad.group.log</log_file>
-    <extjs_dir>/Users/jcai/dev/ext-4.2.1.883</extjs_dir>
+    <log_file>${env.LOG_DIR}/monad.group.log</log_file>
+    <extjs_dir>/apps/dist/ext-5</extjs_dir>
     <web>
       <bind>127.0.0.1:9080</bind>
     </web>
@@ -15,6 +15,6 @@
     </zk>
     <group id="test">
         <cn_name>test_group</cn_name>
-        <api_url>http://localhost:9081/api</api_url>
+        <api_url>http://127.0.0.1:9081/api</api_url>
     </group>
 </monad_group>
