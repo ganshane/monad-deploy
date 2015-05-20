@@ -13,14 +13,14 @@
   <group_api>http://127.0.0.1:9080/group/api</group_api>
   <nosql>
     <!-- 数据存放路径 -->
-    <path>${env.DATA_DIR}/db-node</path>
+    <path>${env.DATA_DIR}/node-db</path>
     <!-- nosql 缓存大小,单位:MB -->
     <cache_size_mb>8</cache_size_mb>
   </nosql>
   <!-- 索引配置 -->
   <index>
     <!-- 索引存放路径 -->
-    <path>${env.DATA_DIR}/index-node</path>
+    <path>${env.DATA_DIR}/node-index</path>
     <!-- 写的时候的buffer,单位(MB) -->
     <writer_buffer>32</writer_buffer>
   </index>

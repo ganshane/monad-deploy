@@ -3,6 +3,10 @@ set -e
 
 function startup() {
   echo "starting ..."
+  #create directory
+  mkdir -p ${DATA_DIR}/node-db
+  mkdir -p ${DATA_DIR}/node-index
+  mkdir -p ${DATA_DIR}/sync-db
   # stop service and clean up here
   apps=("cloud" "group" "sync" "node" "api")
   num=${#apps[@]}

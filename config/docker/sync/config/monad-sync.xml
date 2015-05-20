@@ -17,7 +17,7 @@
     </data>
     <nosql>
       <!-- 数据存放路径 -->
-      <path>${env.DATA_DIR}/db-sync</path>
+      <path>${env.DATA_DIR}/sync-db</path>
       <!-- nosql 缓存大小,单位:MB -->
       <cache_size_mb>8</cache_size_mb>
     </nosql>
