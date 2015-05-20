@@ -1,0 +1,17 @@
+JAVA_OPTIONS="$JAVA_OPTIONS -server -XX:PermSize=64m \
+  -XX:+UseNUMA \
+  -Xnoclassgc  \
+  -XX:+UseFastAccessorMethods \
+  -XX:ReservedCodeCacheSize=48m \
+  -XX:+UseStringCache \
+  -XX:+UseGCOverheadLimit \
+  -XX:+UseCompressedOops \
+  -XX:+DisableExplicitGC \
+  -XX:+AggressiveOpts \
+  -XX:CMSInitiatingOccupancyFraction=70 \
+  -XX:+ParallelRefProcEnabled \
+  -XX:+UseAdaptiveSizePolicy \
+  -XX:MaxGCPauseMillis=500 \
+  -XX:+UseG1GC \
+  -XX:InitiatingHeapOccupancyPercent=0  \
+  -XX:GCPauseIntervalMillis=10000 "
