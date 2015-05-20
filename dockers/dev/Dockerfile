@@ -76,7 +76,6 @@ RUN {\
   && ln -s  ${release_path}/apps/doc ${app_path}/${comp}/doc \
   && ln -s  ${release_path}/apps/dic ${app_path}/${comp}/dic \
   && ln -s  ${release_path}/config/${_stage}/${comp}/config  ${app_path}/${comp}/ \
-  && ln -s  ${release_path}/config/${_stage}/${comp}/config  ${app_path}/${comp}/ \
   && cp ${release_path}/config/${_stage}/${comp}/${comp}rc ~/.${comp}rc \
   && mkdir -p ${release_path}/apps/${comp}/lib \
   && ln -s  ${release_path}/apps/${comp}/private-lib/*  ${release_path}/apps/${comp}/lib/ \
