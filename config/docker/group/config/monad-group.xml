@@ -6,9 +6,9 @@
 
 <monad_group>
     <log_file>${env.LOG_DIR}/monad.group.log</log_file>
-    <extjs_dir>/apps/dist/ext-5</extjs_dir>
+    <extjs_dir>/dist/apps/ext-5</extjs_dir>
     <web>
-      <bind>127.0.0.1:9080</bind>
+      <bind>0.0.0.0:9080</bind>
     </web>
     <zk>
       <address>127.0.0.1:3333</address>
