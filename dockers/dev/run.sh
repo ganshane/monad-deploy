@@ -41,21 +41,33 @@ usage(){
   exit 1
 }
 
-if [ -z $CLOUD_PORT ]; then
-  export CLOUD_PORT=3333
-fi
 if [ -z $DATA_DIR ]; then
   export DATA_DIR=/monad-data
 elif [ ! -d $DATA_DIR ]; then
   echo "$DATA_DIR doesn't exists or can't be written"
   usage;
 fi
+
 if [ -z $LOG_DIR ]; then
   export LOG_DIR=/monad-log
 elif [ ! -d $LOG_DIR ]; then
   echo "$LOG_DIR doesn't exists or can't be written"
   usage;
 fi
+
+#API configuration
+export GROUP_API_URL=http://127.0.0.1:9080/group/api
+#group
+export CLOUD_ADDRESS=127.0.0.1:3333
+export API_URL=http://127.0.0.1:9081/api
+#node
+export GROUP_API_URL=http://127.0.0.1:9080/group/api
+export NODE_BIND=0.0.0.0:5555
+export NODE_EXPOSE_BIND=127.0.0.1:5555
+#sync
+export GROUP_API_URL=http://127.0.0.1:9080/group/api
+export SYNC_BIND=0.0.0.0:5556
+export SYNC_EXPOSE_BIND=127.0.0.1:5556
 
 #start monad application
 startup

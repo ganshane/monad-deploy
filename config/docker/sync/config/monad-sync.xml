@@ -8,7 +8,8 @@
   <log_file>${env.LOG_DIR}/monad.sync.log</log_file>
   <local_store_dir>${env.DATA_DIR}/local.sync</local_store_dir>
   <rpc>
-    <bind>127.0.0.1:5559</bind>
+    <bind>${env.SYNC_BIND}</bind>
+    <expose>${env.SYNC_EXPOSE_BIND}</expose>
   </rpc>
   <group_api>${env.GROUP_API_URL}</group_api>
   <sync>
