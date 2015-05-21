@@ -6,9 +6,9 @@
 
 <monad_api>
   <log_file>${env.LOG_DIR}/monad.api.log</log_file>
-    <group_api>http://127.0.0.1:9080/group/api</group_api>
-    <local_store_dir>${env.DATA_DIR}/local.api</local_store_dir>
-    <web>
-      <bind>0.0.0.0:9081</bind>
-    </web>
+  <group_api>${env.GROUP_API_URL}</group_api>
+  <local_store_dir>${env.DATA_DIR}/local.api</local_store_dir>
+  <web>
+    <bind>0.0.0.0:9081</bind>
+  </web>
 </monad_api>

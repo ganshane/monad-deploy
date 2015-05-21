@@ -8,9 +8,9 @@
   <local_store_dir>${env.DATA_DIR}/local.node</local_store_dir>
   <partition_id>1</partition_id>
   <rpc>
-    <bind>127.0.0.1:5558</bind>
+    <bind>0.0.0.0:5558</bind>
   </rpc>
-  <group_api>http://127.0.0.1:9080/group/api</group_api>
+  <group_api>${env.GROUP_API_URL}</group_api>
   <nosql>
     <!-- 数据存放路径 -->
     <path>${env.DATA_DIR}/node-db</path>

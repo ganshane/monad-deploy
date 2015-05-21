@@ -6,7 +6,7 @@
     <log_file>${env.LOG_DIR}/monad.cloud.log</log_file>
     <cloud_id>1</cloud_id>
     <data_dir>${env.DATA_DIR}/cloud</data_dir>
-    <port>${env.CLOUD_PORT}</port>
+    <port>3333</port>
     <init_limit>5</init_limit>
     <sync_limit>2</sync_limit>
     <!--

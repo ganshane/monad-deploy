@@ -11,10 +11,10 @@
       <bind>0.0.0.0:9080</bind>
     </web>
     <zk>
-      <address>127.0.0.1:3333</address>
+      <address>${env.CLOUD_ADDRESS}</address>
     </zk>
     <group id="test">
         <cn_name>test_group</cn_name>
-        <api_url>http://127.0.0.1:9081/api</api_url>
+        <api_url>${env.API_URL}</api_url>
     </group>
 </monad_group>
