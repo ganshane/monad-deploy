@@ -70,9 +70,11 @@ export SYNC_BIND=0.0.0.0:5556
 export SYNC_EXPOSE_BIND=127.0.0.1:5556
 
 #start monad application
+touch $LOG_DIR/monad.api.log
 startup
-echo "[hit enter key to exit] or run 'docker stop <container>'"
-read
+#echo "[hit enter key to exit] or run 'docker stop <container>'"
+#read
+tail -F $LOG_DIR/monad.api.log
 
 shutdown
 echo "exited $0"
