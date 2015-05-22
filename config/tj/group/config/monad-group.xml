@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   Copyright 2012,2013,2014,2015 the original author or authors. All rights reserved.
+   site: http://www.ganshane.com
+-->
+
+<monad_group>
+    <log_file>${env.LOG_DIR}/monad.group.log</log_file>
+    <extjs_dir>/dist/apps/ext-5</extjs_dir>
+    <web>
+      <bind>0.0.0.0:9080</bind>
+    </web>
+    <zk>
+      <address>${env.CLOUD_ADDRESS}</address>
+    </zk>
+    <group id="test">
+        <cn_name>test_group</cn_name>
+        <api_url>${env.API_URL}</api_url>
+    </group>
+</monad_group>

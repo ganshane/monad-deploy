@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+   Copyright 2014,2015 the original author or authors. All rights reserved.
+   site: http://www.ganshane.com
+-->
+
+<monad_sync>
+  <log_file>${env.LOG_DIR}/monad.sync.log</log_file>
+  <local_store_dir>${env.DATA_DIR}/local.sync</local_store_dir>
+  <rpc>
+    <bind>${env.SYNC_BIND}</bind>
+    <expose>${env.SYNC_EXPOSE_BIND}</expose>
+  </rpc>
+  <group_api>${env.GROUP_API_URL}</group_api>
+  <sync>
+    <data>
+      <partition id="1"  weight="1"/>
+    </data>
+    <nosql>
+      <!-- 数据存放路径 -->
+      <path>${env.DATA_DIR}/sync-db</path>
+      <!-- nosql 缓存大小,单位:MB -->
+      <cache_size_mb>8</cache_size_mb>
+    </nosql>
+  </sync>
+</monad_sync>
