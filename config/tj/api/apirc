@@ -1,4 +1,6 @@
 JAVA_OPTIONS="$JAVA_OPTIONS -server -XX:PermSize=64m \
+  -Xmx5g -Xms5g \
+  -Dmonad.rpc.compress=false \
   -XX:+UseNUMA \
   -Xnoclassgc  \
   -XX:+UseFastAccessorMethods \
