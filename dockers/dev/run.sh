@@ -16,7 +16,7 @@ function startup() {
     touch /apps/${app}/out.log
     touch ${LOG_DIR}/monad.${app}.log
     cd /apps/${app} && bin/monad-${app} start
-    sleep 2
+    sleep 5
     cat /apps/${app}/out.log
   done
   $JAVA_HOME/bin/jps
