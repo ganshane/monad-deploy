@@ -74,6 +74,8 @@ touch $LOG_DIR/monad.api.log
 startup
 #echo "[hit enter key to exit] or run 'docker stop <container>'"
 #read
+tail -100 $LOG_DIR/monad.cloud.log
+tail -100 $LOG_DIR/monad.group.log
 tail -F $LOG_DIR/monad.api.log
 
 shutdown
