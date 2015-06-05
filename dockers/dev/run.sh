@@ -1,5 +1,21 @@
 #!/usr/bin/env bash
 set -e
+function waiting_port() {
+  TCPListeningnum=`netstat -an | grep ":$port " | awk '$1 == "tcp" && $NF == "LISTEN" {print $0}' | wc -l`
+
+  if [ $TCPListeningnum = 1 ]
+  then
+    {
+      echo "The port $port is listening"
+    }
+  else
+    {
+      echo "The port $port is not listening"
+      sleep 2
+      waiting_port
+    }
+  fi
+}
 
 function startup() {
   echo "starting ..."
@@ -16,7 +32,13 @@ function startup() {
     touch /apps/${app}/out.log
     touch ${LOG_DIR}/monad.${app}.log
     cd /apps/${app} && bin/monad-${app} start
-    sleep 5
+    if [ $i = 0 ]; then
+      port=3333
+      waiting_port
+    elif [ $i = 1 ]; then
+      port=9080
+      waiting_port
+    fi
     cat /apps/${app}/out.log
   done
   $JAVA_HOME/bin/jps
