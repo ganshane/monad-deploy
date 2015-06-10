@@ -1,7 +1,7 @@
 image: daocloud/ci-java:openjdk7
 
 env:
-    - MYENV = "hello"
+    - MYENV = "test"
 
 install:
     - echo $MYENV
