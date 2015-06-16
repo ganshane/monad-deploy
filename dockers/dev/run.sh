@@ -38,6 +38,7 @@ function startup() {
     elif [ $i = 1 ]; then
       port=9080
       waiting_port
+      wget $GROUP_API_URL
     fi
     cat /apps/${app}/out.log
   done
