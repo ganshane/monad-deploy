@@ -299,6 +299,7 @@ then
 fi
 
 JAVA_OPTIONS="$JAVA_OPTIONS $SERVER_JAVA_OPTIONS  \
+    -Doracle.jdbc.V8Compatible=true \
     -Dserver.port=$SERVER_PORT \
     -Dserver.home=$SERVER_HOME \
     -Dfile.encoding=utf-8 "
