@@ -87,7 +87,7 @@ EXPOSE 9080 9081
 VOLUME ["/monad-data"]
 VOLUME ["/monad-log"]
 
-RUN apt-get install -yy net-tools
+RUN apt-get install -yy net-tools wget
 
 ADD dockers/dev/run.sh /run.sh
 RUN chmod +x /run.sh
